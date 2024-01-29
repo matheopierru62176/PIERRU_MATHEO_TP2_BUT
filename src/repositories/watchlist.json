@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "nom": {
+        "type": "string"
+      },
+      "utilisateurId": {
+        "type": "string"
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": ["id", "nom", "utilisateurId"]
+  }
