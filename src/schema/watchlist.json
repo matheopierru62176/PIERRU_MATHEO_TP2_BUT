@@ -1,4 +1,6 @@
 {
+  "title" : "watchlists",
+  "description": "Description de la ressource watchlist",
     "type": "object",
     "properties": {
       "id": {
@@ -7,16 +9,15 @@
       "nom": {
         "type": "string"
       },
-      "email": {
-        "type": "string",
-        "format": "email"
+      "utilisateurId": {
+        "type": "string"
       },
-      "watchlists": {
+      "items": {
         "type": "array",
         "items": {
           "type": "string"
         }
       }
     },
-    "required": ["id", "nom", "email"]
+    "required": ["id", "nom", "utilisateurId", "items"]
   }

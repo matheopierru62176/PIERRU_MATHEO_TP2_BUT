@@ -1,5 +1,6 @@
 const { getCollection } = require('./connection');
 
+
 async  function  findOne(collectionName, query, options = {}) {
 	try {
 		const  collection = getCollection(collectionName);
@@ -8,7 +9,7 @@ async  function  findOne(collectionName, query, options = {}) {
 	} catch (e) {
 		console.log(`Erreur lors de l execution de la fonction findOne avec les parametres suivants: ${query}`);
 		console.log(e);
-		throw  e;
+		//throw  e;
 	}
 }
 
@@ -33,7 +34,7 @@ async function insertOne(collectionName, document) {
     } catch (e) {
         console.log(`Erreur lors de l execution de la fonction insertOne avec les parametres suivants: ${document}`);
         console.log(e);
-        throw e;
+       // throw e;
     }
 }
 
@@ -111,3 +112,5 @@ async function deleteMany(collectionName, filter, options = {}) {
         throw e;
     }
 }
+
+module.exports = {findOne, find, insertOne, insertMany, updateOne, updateMany, replaceOne, deleteOne, deleteMany}

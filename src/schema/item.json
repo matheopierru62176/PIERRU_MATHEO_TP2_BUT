@@ -1,4 +1,6 @@
 {
+  "title" : "item",
+  "description": "Description de l'item",
     "type": "object",
     "properties": {
       "id": {
